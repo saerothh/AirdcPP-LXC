@@ -10,7 +10,7 @@ chmod 775 /var/lib/airdcpp/
 
 rm -f airdcpp_latest_master_*
 wget --content-disposition 'https://web-builds.airdcpp.net/stable/airdcpp_latest_master_64-bit_portable.tar.gz'
-tar -xvzf airdcpp_latest_master.*.tar.gz
+tar -xvzf airdcpp_latest_master_*.tar.gz
 mv airdcpp-webclient /opt
 chmod 775 /opt/airdcpp-webclient
 
