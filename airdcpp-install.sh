@@ -29,11 +29,20 @@ if [ ! -d "airdcpp-webclient" ]; then
   exit 1
 fi
 
+# Eliminar el directorio anterior si ya existe
+rm -rf /opt/airdcpp-webclient
+
 # Mover y configurar Airdcpp
 mv airdcpp-webclient /opt
 chmod 775 /opt/airdcpp-webclient
 
-#Ejecucion de Airdcpp por primera vez
+# Verificar si el ejecutable existe
+if [ ! -f "/opt/airdcpp-webclient/airdcppd" ]; then
+  echo "Error: El archivo /opt/airdcpp-webclient/airdcppd no existe."
+  exit 1
+fi
+
+# Ejecución de Airdcpp por primera vez para configuración
 /opt/airdcpp-webclient/airdcppd --configure
 
 # Crear el archivo del servicio systemd
