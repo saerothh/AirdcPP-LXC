@@ -8,7 +8,7 @@ apt-get install -y curl sudo mc
 mkdir -p /var/lib/airdcpp/
 chmod 775 /var/lib/airdcpp/
 
-rm -f airdcpp_latest_master.*
+rm -f airdcpp_latest_master_*
 wget --content-disposition 'https://web-builds.airdcpp.net/stable/airdcpp_latest_master_64-bit_portable.tar.gz'
 tar -xvzf airdcpp_latest_master.*.tar.gz
 mv airdcpp-webclient /opt
