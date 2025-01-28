@@ -33,6 +33,9 @@ fi
 mv airdcpp-webclient /opt
 chmod 775 /opt/airdcpp-webclient
 
+#Ejecucion de Airdcpp por primera vez
+./opt/airdcpp-webclient/airdcppd --configure
+
 # Crear el archivo del servicio systemd
 cat <<EOF > /etc/systemd/system/airdcpp.service
 [Unit]
